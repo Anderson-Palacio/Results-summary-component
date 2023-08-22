@@ -1,0 +1,191 @@
+@import "_colors.scss";
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.button {
+  background-color: $dark-gray-blue;
+  border-radius: 30px;
+  color: $white;
+  font-size: 18px;
+  height: 55px;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+
+  &:hover {
+    background-color: $light-royal-blue;
+    cursor: pointer;
+  }
+
+  @media (min-width: 376px) and (max-width: 1440px) {
+    font-size: 16px;
+    height: 40px;
+  }
+}
+
+.container {
+  @media (min-width: 376px) and (max-width: 1440px) {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    height: 380px;
+    justify-content: center;
+    margin: 0 auto;
+    width: 650px;
+  }
+}
+
+.card {
+  background-image: linear-gradient(
+    to bottom,
+    $light-slate-blue,
+    $light-royal-blue
+  );
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  height: 355px;
+  text-align: center;
+  width: 100%;
+
+  @media (min-width: 376px) and (max-width: 1440px) {
+    border-radius: 30px;
+    height: 370px;
+    width: 50%;
+  }
+}
+
+.score_circle {
+  align-items: center;
+  background-image: linear-gradient(to bottom, $Violet-blue, $Persian-blue);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  height: 140px;
+  justify-content: center;
+  margin: 0 auto;
+  width: 140px;
+}
+
+.card__content {
+  color: $dark-gray-blue3;
+  font-size: 16px;
+  margin-left: 60px;
+  margin-right: 60px;
+
+  @media (min-width: 376px) and (max-width: 1440px) {
+    margin-left: 33px;
+    margin-right: 33px;
+  }
+}
+
+.card__title {
+  color: $light-lavender3;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 27px;
+  padding-top: 27px;
+}
+
+.card__subtitle {
+  color: $white;
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  margin-top: 25px;
+}
+
+.category-description {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.category--content {
+  display: flex;
+  width: 100%;
+}
+
+.category-score {
+  color: $dark-gray-blue2;
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.score_circle__text {
+  color: $light-lavender2;
+  font-size: 16px;
+}
+
+.score_circle__title {
+  color: $white;
+  font-size: 55px;
+  font-weight: 800;
+}
+
+.summary {
+  margin: 26px;
+
+  @media (min-width: 376px) and (max-width: 1440px) {
+    width: 50%;
+  }
+}
+
+.summary__title {
+  margin-bottom: 25px;
+
+  @media (min-width: 376px) and (max-width: 1440px) {
+    margin-bottom: 15px;
+  }
+}
+
+.score-value {
+  color: $dark-gray-blue;
+}
+
+@for $i from 1 through length($list_of_colors_bg) {
+  .category-#{$i} {
+    background-color: nth($list_of_colors_bg, $i);
+    border-radius: 10px;
+    margin-bottom: 22px;
+    padding: 15px 20px;
+
+    @media (min-width: 376px) and (max-width: 1440px) {
+      margin-bottom: 13px;
+      padding-bottom: 12px;
+      padding-top: 12px;
+    }
+  }
+
+  .category--category-#{$i} {
+    color: nth($list_of_colors_txt, $i);
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: 10px;
+  }
+}
